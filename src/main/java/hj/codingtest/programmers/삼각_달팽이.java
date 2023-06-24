@@ -3,6 +3,10 @@ package hj.codingtest.programmers;
 public class 삼각_달팽이 {
     public int[] solution(int n) {
 
+        if (n == 1) {
+            return new int[]{1};
+        }
+
         int[][] triangle = new int[n][n];
 
         int x = 0;
