@@ -1,5 +1,6 @@
-package hj.codingtest.programmers;
+package hj.codingtest.programmers.array;
 
+import hj.codingtest.programmers.array.행렬의_곱셈;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;

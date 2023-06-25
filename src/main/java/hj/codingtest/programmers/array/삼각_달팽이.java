@@ -1,4 +1,4 @@
-package hj.codingtest.programmers;
+package hj.codingtest.programmers.array;
 
 public class 삼각_달팽이 {
 

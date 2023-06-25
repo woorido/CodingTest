@@ -1,4 +1,4 @@
-package hj.codingtest.programmers;
+package hj.codingtest.programmers.array;
 
 import java.util.*;
 

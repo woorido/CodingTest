@@ -1,7 +1,8 @@
-package hj.codingtest.programmers;
+package hj.codingtest.programmers.array;
 
 import static org.assertj.core.api.Assertions.*;
 
+import hj.codingtest.programmers.array.교점에_별_만들기;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;

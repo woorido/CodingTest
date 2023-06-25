@@ -1,4 +1,4 @@
-package hj.codingtest.programmers;
+package hj.codingtest.programmers.array;
 
 public class 행렬의_곱셈 {
     public int[][] solution(int[][] arr1, int[][] arr2) {
