@@ -1,16 +1,16 @@
-##문자열
+## 문자열
 
-###문자열 내 문자를 가져오는 방법
+### 문자열 내 문자를 가져오는 방법
 1. String.charAt(int index) : index에 있는 문자를 char 형식으로 반환, 특정 몇 개의 문자만 필요할 때 사용
 2. String.toCharArray() : 모든 문자가 들어있는 char[] 형식의 데이터 반환, 모든 문자 정보가 필요할 때 사용
 
-###아스키 코드
+### 아스키 코드
 문자열을 구성하고 char형으로 표현되는 문자는 사실 정수형 int의 축소판이다
 즉, 문자는 내부적으로 정수로 취급되고 연산된다
 문자를 정수로, 또 정수를 문자로 바꾸는 규칙이 아스키 코드(ascii code) 이다
 아스키 코드를 이용하여 문자를 정수로 바꾸거나, 소문자를 대문자로 바꾸는 등의 작업을 할 수 있다
 
-###문자를 정수로 바꾸는 방법
+### 문자를 정수로 바꾸는 방법
 | 문자    |'0'|'1'|'2'|'3'|'4'|'5'|'6'|
 |-------|---|---|---|---|---|---|---|
 | 아스키코드 |48|49|50|51|52|53|54|
@@ -28,7 +28,7 @@ char digit = '9';
 int digitToInt = Character.getNumericValue(digit);
 ```
 
-###영문 소문자를 대문자로 바꾸는 방법
+### 영문 소문자를 대문자로 바꾸는 방법
 대문자 'A' ~ 'Z'는 65 ~ 90 의 값
 소문자 'a' ~ 'z'는 97 ~ 122 의 값
 이 값들을 살펴보면 소문자와 대문자 사이에는 'a' = 'A' 만큼 차이가 있음을 알 수 있다
@@ -42,7 +42,7 @@ char lower = 'e';
 char upper = Character.toUpperCase(lower);
 ```
 
-###영문 대문자를 소문자로 바꾸는 방법
+### 영문 대문자를 소문자로 바꾸는 방법
 
 ```
 char upper = 'E';
@@ -53,7 +53,7 @@ char upper = 'E';
 char lower = Character.toUpperCase(upper);
 ```
 
-###StringBuilder
+### StringBuilder
 
 <span style="color:#808080">
 
@@ -78,7 +78,7 @@ System.out.println(az); // "abcd..xyz"
 문자를 이어 붙이는 것은 배열 뒤에 원소 하나를 집어 넣는 것이니 상수 시간 O(1)이 기대 시간 복잡도가 된다
 
 ---
-###string 관련 메소드
+### string 관련 메소드
 ```
 String str = "abcde";
 
@@ -117,7 +117,7 @@ Integer.parseInt("300") // 문자열을 숫자로 변환
 Integer.toString(300) // 숫자를 문자열로 변환
 ```
 
-###StringBuilder 관련 메소드
+### StringBuilder 관련 메소드
 ```
 StringBuilder sb = new StringBuilder();
 
@@ -135,7 +135,7 @@ sb.setLength(2) // 문자열 길이를 2로 줄임 (→ ab)
 sb.setLength(4) // 문자열 길이를 4로 늘림 (→ 뒤가 공백으로 채워짐)
 ```
 
-###List 관련 메소드
+### List 관련 메소드
 ```
 List<String> list = new ArrayList<>();
 
@@ -181,7 +181,7 @@ List<Integer> list = new ArrayList<>();
 int[] temp = list.stream().mapToInt(i->i).toArray();
 ```
 
-###Collections 관련 메소드
+### Collections 관련 메소드
 ```
 int[] arr = { 1123, 1412, 23, 44, 512132 };
 List<Integer> list = new ArrayList<>(Arrays.asList(arr));
