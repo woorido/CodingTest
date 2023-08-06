@@ -1,4 +1,4 @@
-package hj.codingtest.programmers.string;
+package hj.codingtest.programmers.exhaustivesearch;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -9,23 +9,20 @@ import java.util.stream.Stream;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
-class 문자열_압축_test {
-    문자열_압축 stringCompression = new 문자열_압축();
+class 수식_최대화_test {
+    수식_최대화 maximizeFormula = new 수식_최대화();
 
     @ParameterizedTest
     @MethodSource("generateData")
-    void name(String s, int result) {
-        int solution = stringCompression.solution(s);
+    public void 수식_최대화(String expression, long result) {
+        long solution = maximizeFormula.solution(expression);
         assertThat(solution).isEqualTo(result);
     }
 
     private static Stream<Arguments> generateData() {
         return Stream.of(
-                Arguments.of("aabbaccc", 7),
-                Arguments.of("ababcdcdababcdcd", 9),
-                Arguments.of("abcabcabcabcdededededede", 14),
-                Arguments.of("xababcdcdababcdcd", 17)
+                Arguments.of("100-200*300-500+20", 60420),
+                Arguments.of("50*6-3*2", 300)
         );
     }
-
 }

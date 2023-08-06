@@ -77,6 +77,35 @@ System.out.println(az); // "abcd..xyz"
 이를 해결하기 위해 StringBuilder 클래스를 이용하여 문자를 이어 붙이거나 뺴는 등 수정할 때마다 새로운 문자열을 만들지 않고 내부 배열에서 직접 수정한다
 문자를 이어 붙이는 것은 배열 뒤에 원소 하나를 집어 넣는 것이니 상수 시간 O(1)이 기대 시간 복잡도가 된다
 
+
+### 진법 바꾸기
+
+문자열과 정수를 변환하는 메서드 (10진수 기준)
+
+| 메서드                         | 반환형    | 내용                     |
+|-----------------------------|--------|------------------------|
+| Integer.parseInt(String s)  | int    | 숫자를 표현하는 문자열 s를 정수로 변환 |
+| Integer.toString(int v)     | String | 정수 v를 문자열로 변환          |
+| Integer.parseLong(String s) | long   | 숫자를 표현하는 문자열 s를 정수로 변환 |
+| Long.toString(int v)        | String | 정수 v를 문자열로 변환 |
+
+문자열과 정수를 진법에 따라 변환하는 메서드
+
+| 메서드                                  | 반환형    | 내용                                |
+|--------------------------------------|--------|-----------------------------------|
+| Integer.parseInt(String s, int radix) | int    | radix 진법으로 숫자를 표현하는 문자열 s를 정수로 변환 |
+| Integer.toString(int v, int radix)   | String | 정수 v를 radix 진법의 문자열로 변환           |
+| Long.parseLong(String s, int radix)              | long   | radix 진법으로 숫자를 표현하는 문자열 s를 정수로 변환 |
+| Long.toString(int v, int radix)                | String | 정수 v를 radix 진법의 문자열로 변환           |
+
+예를 들어 2진수로 표현된 문자열을 16진수로 변경하는 코드는 다음과 같다
+```
+String binary = "1010";
+int value = Integer.parseInt(binary, 2); //2진법 문자열 "1010"이 파싱되어 value 변수에는 정수 10이 들어간다
+String hex = Integer.toString(value, 16); //hex 변수에는 이 값을 16진수로 변환한 문자열 "a" 가 들어간다
+String upperHex = Integer.toString(value, 16).toUpperCase(); //대문자로 표현된 16진수를 얻을 수 있다
+```
+
 ---
 ###string 관련 메소드
 ```

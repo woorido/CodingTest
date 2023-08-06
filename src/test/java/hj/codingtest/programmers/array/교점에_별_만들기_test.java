@@ -17,7 +17,8 @@ public class 교점에_별_만들기_test {
     @ParameterizedTest
     @MethodSource("generateData")
     public void 교점에_별_만들기(int[][] line, String[] result) {
-        assertThat(makeStar.solution(line)).isEqualTo(result);
+        String[] solution = makeStar.solution(line);
+        assertThat(solution).isEqualTo(result);
     }
 
     private static Stream<Arguments> generateData() {
